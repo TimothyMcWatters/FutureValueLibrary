@@ -1,0 +1,22 @@
+import Foundation
+
+// FUTURE VALUE CALCULATOR
+
+/************
+ * Author: Timothy McWatters
+ * Course: COP3665 - iOS Programming 2017
+ * Remote Library for Open Source Assignment
+ *
+ * FUNCTION TO PERFORM FUTURE VALUES CALCULATIONS.
+ * param p  The principal deposit.
+ * param r  The period interest rate (in this case annual).
+ * param t  Length of time (period) invested in years.
+ * prints:  value resultent from furture values formula.
+ *************/
+public func calculateFutureValue(p: Double, r: Double, t: Double) {
+    let rate:Double = r * 0.01
+    let resultString: String
+    resultString = String(format: "%.2f", round(100 * (p * (pow((1 + rate), t))))/100)
+    print("Your future value after \(t) years is is $\(resultString)")
+} // End of calculateFutureValue
+
